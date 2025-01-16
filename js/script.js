@@ -1,16 +1,16 @@
 "use strict";
 
-let number = 5;
-const leftBorderWidth = 1;
+// let number = 5;
+// const leftBorderWidth = 1;
 
-number = 9;
-console.log(number);
+// number = 9;
+// console.log(number);
 
-const obj = {
-    'one': 25,
-    'two': 31
-};
-console.log(obj);
+// const obj = {
+//     'one': 25,
+//     'two': 31
+// };
+// console.log(obj);
 // alert('hello, you are super)');   всплывающее окно, предупреждение
 
 // const result = confirm('Are you here?');   всплывающее окно с вопросом и возможностью ответа (да/нет)
@@ -24,5 +24,20 @@ console.log(obj);
 // document.write(answers);
 // console.log(answers);
 
-const user = 'Dima';
-alert(`Hello, ${user}`);
+// const user = 'Dima';
+// alert(`Hello, ${user}`);
+const numberOfFolms = +prompt('Сколько фильмов вы уже посмотрели?', "");
+const personalMovieDB = {
+    count: numberOfFolms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+    b = prompt('На сколько оцените его?', ''),
+    c = prompt('Один из последних просмотренных фильмов?', ''),
+    d = prompt('На сколько оцените его?', '');
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+console.log(personalMovieDB);
