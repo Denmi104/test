@@ -203,17 +203,129 @@
 // const result = [data.reverse()];
 // console.log(result);
 
-const lines = 5;
-let result = '';
+// const lines = 5;
+// let result = '';
 
-for (let i = 0; i <= lines; i++) {
-    for (let j = 0; j < lines - i; j++) {
-        result += " ";
+// for (let i = 0; i <= lines; i++) {
+//     for (let j = 0; j < lines - i; j++) {
+//         result += " ";
+//     }
+//     for (let j = 0; j < 2 * i + 1; j++) {
+//         result += "*";
+//     }
+//     result += "\n";
+// }
+
+// console.log(result)
+
+// let soneAge = 38;
+// someVare = soneAge;
+// console.log(someVare);
+
+// let userHeight = 145 / 0;
+// //Отримаємо NaN
+// console.log(userHeight);
+
+// let userName;
+// //Отримаємо тип даних Null
+// console.log(typeof userName);
+
+// //Варіант №4
+// let userSize = "45" / "8";
+// //Отримаємо тип даних Number
+// console.log(typeof userSize);
+
+// prompt('hello', 18)
+
+// let num =0;
+// while (num<3) {
+//     console.log(`число:  ${num}`);
+//     num++;
+// }
+// forOne: for (let num = 0; 0 < 2; num++){
+//     for (let size = 0; size < 3; size++){
+//         if (size == 1) { break forOne; }
+//         console.log(size);
+        
+//     }
+
+// }
+
+// function showName() {
+//     console.log('Vasya');
+// }
+// setTimeout(showName, 0);
+// console.log('Kolya');
+
+// let someVar = 0;
+// ++someVar;
+
+// if (someVar) {
+// console.log(someVar);
+// }
+
+// for (let i = 1; i <= 10; i++) {
+//     console.log(`Пункт № ${i}`)
+// }
+
+// Задача №3
+// Що потрапить в консоль ?
+// if (2 * 20 <= 10 || 30 / 2 < 5 && 10 <= "10" || 20 === "20") {
+// console.log('000');
+// }
+
+// Задача №4
+// Створіть функцію, яка повертає результат ділення числа a на число b з додаванням рядка "Результат ділення: "
+// Викличте функцію передаючі різні значення, у тому числі не передаючи зовсім.
+// Функція не має повертати NaN, Infinite або помилку
+
+
+// let homeWork = ["Олексій", 10, "10", 12, "Ірина"];
+//  for (let index = 0; index < homeWork.length; ++index){
+// if (homeWork[index] === 10){
+// console.log(homeWork[index]);
+// }
+//  }
+const elemBody = document.body;
+console.log(elemBody);
+
+
+
+let addList = (count = 3) => {
+    const list = document.createElement(`ul`);
+    for (let i=0; i < count; i++) {
+        list.insertAdjacentHTML(
+            'beforeend', `
+            <li class="list__item">Елемент списку №${i + 1}</li>
+            `);
     }
-    for (let j = 0; j < 2 * i + 1; j++) {
-        result += "*";
-    }
-    result += "\n";
+    document.body.insertAdjacentElement('afterbegin', list);
+}
+addList(20);
+
+console.log(addList);
+
+const body = document.body;
+body.classList.add("louded");
+if (body.classList.contains("louded")) {
+    elemBody.style.background = `green`;
 }
 
-console.log(result)
+const items = document.querySelectorAll(`.item`);
+console.log(items);
+items.forEach((item, index) => {
+    item.classList.add(`active`);
+    item.innerText = `Елемент №${index +1};`
+    
+});
+
+const but = document.querySelector(".button");
+but.scrollIntoView({ block: `center`, behavior: `smooth` });
+
+const link = document.querySelector(".link");
+link.setAttribute("data-link", "100");
+console.log(link);
+const value = link.getAttribute("data-link")
+if (value < 200) {
+    link.style.color = "red";
+}
